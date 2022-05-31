@@ -1,8 +1,7 @@
 const express = require('express');
-const swaggerJSDoc = require('swagger-jsdoc');
 const router = express.Router();
 
-const swagger = require('swagger-jsdoc');
+const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
 const swaggerOptions = {
@@ -24,6 +23,18 @@ const swaggerOptions = {
 
 const specs = swaggerJSDoc(swaggerOptions);
 
+router.get('/', (req, res, next) {
+    res.render('index', { title: 'Express'});
+})
+
 router.use("/api-docs", swaggerUi.serve);
+router.get(
+    "/api-docs",
+    swaggerUi.setup(specs, {
+        explorer: true
+    })
+);
+
+
 
 module.exports = router;
