@@ -2,6 +2,8 @@ const express = require('express');
 const logger = require('morgan');
 const helmet = require('helmet');
 
+const indexRouter = require('./routes/index-routes.js');
+
 
 const app = express();
 

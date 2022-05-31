@@ -16,14 +16,19 @@ const swaggerOptions = {
     },
 
     apis: [
+        './models/photo-model.js',
+        './models/user-model.js',
+        './models/captions-model.js',
         './routes/index-routes.js',
-        './routes/photo.js',
+        './routes/photos.js',
+        './routes/user.js',
+        './routes/caption.js',
     ]
 };
 
 const specs = swaggerJSDoc(swaggerOptions);
 
-router.get('/', (req, res, next) {
+router.get('/', (req, res, next) => {
     res.render('index', { title: 'Express'});
 })
 

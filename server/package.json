@@ -18,8 +18,13 @@
   "homepage": "https://github.com/MattyStrem/CodeCademy-Photo-Caption-Contest#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "fs": "0.0.1-security",
     "helmet": "^5.1.0",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "save": "^2.5.0",
+    "sequelize": "^6.20.1",
     "swagger-jsdoc": "^6.2.1",
     "swagger-ui-express": "^4.4.0"
   }
